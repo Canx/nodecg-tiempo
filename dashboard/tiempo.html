@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript"> 
+    function send(message) {
+        nodecg.sendMessage(message);
+    }
+
+    function reset(seconds) {
+        nodecg.sendMessage("reset", seconds);	
+    }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="send('start')">Start</button> 
+    <button type="button" onclick="send('stop')">Stop</button> 
+    <button type="button" onclick="reset(0)">Reset</button> 
+</body>
+</html>
