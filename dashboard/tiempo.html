@@ -2,19 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript"> 
+    <script type="text/javascript">
+    
     function send(message) {
         nodecg.sendMessage(message);
     }
 
-    function reset(seconds) {
-        nodecg.sendMessage("reset", seconds);	
+    function reset() {
+        let minutes = Number(document.getElementById('minutes').value);
+        let seconds = Number(document.getElementById('seconds').value);
+
+        seconds = seconds + minutes*60;
+        nodecg.sendMessage("reset", seconds);
+    }
+
+    function update_scoreboard() {
+        data = {
+            local: {
+                nombre: document.getElementById('localname').value,
+                color: document.getElementById('localcolor').value,
+                goles: document.getElementById('goleslocal').value},
+            visitante: {
+                nombre: document.getElementById('visitantename').value,
+                color: document.getElementById('visitantecolor').value,
+                goles: document.getElementById('golesvisitante').value}
+        };
+
+        console.log(data);
+        nodecg.sendMessage("scoreboard", data);
+    }
+
+    function gol_local() {
+        document.getElementById('goleslocal').value++;
+        update_scoreboard();
+    }
+
+    function gol_visitante() {
+        document.getElementById('golesvisitante').value++;
+        update_scoreboard();
     }
     </script>
 </head>
 <body>
-    <button type="button" onclick="send('start')">Start</button> 
-    <button type="button" onclick="send('stop')">Stop</button> 
-    <button type="button" onclick="reset(0)">Reset</button> 
+    <div id="startstop">
+        <button type="button" onclick="send('start')">Start</button> 
+        <button type="button" onclick="send('stop')">Stop</button> 
+    </div>
+    <div id="reset">
+        <input type="number" id="minutes" min="0" max="99" value="0">
+        <input type="number" id="seconds" min="0" max="59" value="0">
+        <button type="button" onclick="reset()">Reset</button> 
+    </div>
+    <div id="local">
+        <input type="text" id="localname" value="LOC" size="3">
+        <input type="color" id="localcolor" value="#ff0000">
+        <input type="number" id="goleslocal" min="0" max="99" value="0">
+        <button type="button" id="boton_gollocal" onclick="gol_local()">Gol!</button> 
+    </div>
+    <div id="visitante">
+        <input type="text" id="visitantename" value="VIS" size="3">
+        <input type="color" id="visitantecolor" value="#0000ff">
+        <input type="number" id="golesvisitante" min="0" max="99" value="0">
+        <button type="button" id="boton_golvisitante" onclick="gol_visitante()">Gol!</button> 
+    </div>
+    <div id="update_score">
+        <button type="button" onclick="update_scoreboard()">Update scsore</button> 
+    </div>
 </body>
 </html>

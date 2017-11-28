@@ -13,6 +13,22 @@ nodecg.listenFor('reset', seconds => {
     reset(seconds);
 });
 
+nodecg.listenFor('scoreboard', data => {
+    update_scoreboard(data);
+})
+
+function update_scoreboard(data) {
+    console.log(data);
+
+    document.getElementById("localGoles").innerHTML = data.local.goles;
+    document.getElementById("local").innerHTML = data.local.nombre;
+    document.getElementById("local").style["border-color"] = data.local.color;
+    document.getElementById("visitanteGoles").innerHTML = data.visitante.goles;
+    document.getElementById("visitante").innerHTML = data.visitante.nombre;
+    document.getElementById("visitante").style["border-color"] = data.visitante.color;
+
+}
+
 function reset(s) {
    stop();
    setTime(s)
