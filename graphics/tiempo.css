@@ -1,0 +1,46 @@
+.partido {
+      font-family: 'Roboto', sans-serif;
+      background:rgba(0,0,0,0.8);
+      float: left;
+      padding: 5px 5px 5px 5px;
+}
+.tiempo {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-size: 500%;
+    color: white;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.marcador {
+
+    display: inline-block;
+    display: inline-block;
+    color: white;
+    padding-bottom: 0px;
+}
+
+#local {
+    color: rgb(210,210,255);
+    font-size: 400%;
+    border-style: solid;
+    border-color: red;
+    border-width: 0px 0px 6px 0px;
+    padding: 0px 20px 0px 20px;
+}
+#visitante {
+    color: rgb(210,210,255);
+    font-size: 400%;
+    border-style: solid;
+    border-color: blue;
+    border-width: 0px 0px 6px 0px;
+    padding: 0px 20px 0px 20px;
+}
+.goles {
+    font-size: 500%;
+    padding: 0px 5px 0px 5px;
+    border: 3px solid rgba(255,255,255,1);
+    border-color: rgb(100,100,100);
+    padding: 0px 10px 0px 10px;
+}
