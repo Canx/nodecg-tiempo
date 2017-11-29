@@ -21,6 +21,15 @@
         "file": "tiempo.html",
         "headerColor": "#9f9bbd"
       }
+    ],
+
+    "soundCues": [
+      {
+        "name": "gol",
+        "channels": 1,
+        "defaultFile": "sound/gol.mp3",
+        "defaultVolume": 80
+      }
     ]
   }
 }

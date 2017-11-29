@@ -16,8 +16,9 @@
         nodecg.sendMessage("reset", seconds);
     }
 
-    function update_scoreboard() {
+    function update_scoreboard(esgol) {
         data = {
+            gol: esgol,
             local: {
                 nombre: document.getElementById('localname').value,
                 color: document.getElementById('localcolor').value,
@@ -34,12 +35,16 @@
 
     function gol_local() {
         document.getElementById('goleslocal').value++;
-        update_scoreboard();
+        update_scoreboard(true);
     }
 
     function gol_visitante() {
         document.getElementById('golesvisitante').value++;
-        update_scoreboard();
+        update_scoreboard(true);
+    }
+
+    function show(cb) {
+        nodecg.sendMessage("hide", cb.checked);
     }
     </script>
 </head>
@@ -66,7 +71,10 @@
         <button type="button" id="boton_golvisitante" onclick="gol_visitante()">Gol!</button> 
     </div>
     <div id="update_score">
-        <button type="button" onclick="update_scoreboard()">Update scsore</button> 
+        <button type="button" onclick="update_scoreboard(false)">Update score</button> 
+    </div>
+    <div id="showhide">
+        Mostrar: <input type="checkbox" onclick="show(this)" checked>
     </div>
 </body>
 </html>

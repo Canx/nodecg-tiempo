@@ -17,6 +17,10 @@ nodecg.listenFor('scoreboard', data => {
     update_scoreboard(data);
 })
 
+nodecg.listenFor('hide', checked => {
+    document.getElementById("partido").className = checked ? "animated fadeInDown" : "animated fadeOutUp";
+})
+
 function update_scoreboard(data) {
     console.log(data);
 
@@ -26,6 +30,11 @@ function update_scoreboard(data) {
     document.getElementById("visitanteGoles").innerHTML = data.visitante.goles;
     document.getElementById("visitante").innerHTML = data.visitante.nombre;
     document.getElementById("visitante").style["border-color"] = data.visitante.color;
+
+    if (data.gol) {
+        console.log("play gol!");
+        nodecg.playSound("gol");
+    }
 
 }
 
