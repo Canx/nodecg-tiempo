@@ -50,16 +50,22 @@
 .escudo {
     height: 100px;
     width: 100px;
-    border: 3px solid rgba(255,255,255,1);
+    border: 3px solid rgba(100,100,100,1);
     display: inline-block;
     margin: 0px 0px 20px 0px;
     vertical-align: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+    
 }
 
 #escudolocal {
     background-image: url("escudolocal.png");
+    object-fit: scale-down;
 }
 
 #escudovisitante {
     background-image: url("escudovisitante.png");
+    object-fit: contain;
 }
