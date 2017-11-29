@@ -1,0 +1,65 @@
+.liga {
+    font-family: 'Roboto', sans-serif;
+    font-size: 250%;
+    background:rgba(0,0,0,0.8);
+    color: rgb(210,210,255);
+    width: 600px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.marcador {
+    font-family: 'Roboto', sans-serif;
+    background:rgba(0,0,0,0.8);
+    float: center;
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgb(210,210,255);
+    }
+
+.equipo {
+    font-size: 450%;
+    border-style: solid;
+    border-width: 0px 0px 6px 0px;
+    padding: 0px 20px 0px 20px;
+    vertical-align: top;
+}
+#local {
+    border-color: red;
+}
+
+#visitante {
+    border-color: blue;
+}
+
+.goles {
+    font-size: 500%;
+    height: 100px;
+    width: 100px;
+    padding: 0px 5px 0px 5px;
+    border: 3px solid rgba(255,255,255,1);
+    border-color: rgb(100,100,100);
+    padding: 0px 10px 0px 10px;
+    color: rgb(255,255,255);
+    vertical-align: top;
+    display: inline-block;
+    }
+
+.escudo {
+    height: 100px;
+    width: 100px;
+    border: 3px solid rgba(255,255,255,1);
+    display: inline-block;
+    margin: 0px 0px 20px 0px;
+    vertical-align: top;
+}
+
+#escudolocal {
+    background-image: url("escudolocal.png");
+}
+
+#escudovisitante {
+    background-image: url("escudovisitante.png");
+}

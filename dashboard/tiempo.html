@@ -21,10 +21,12 @@
             gol: esgol,
             local: {
                 nombre: document.getElementById('localname').value,
+                nombrelargo: document.getElementById('localnamelong').value,
                 color: document.getElementById('localcolor').value,
                 goles: document.getElementById('goleslocal').value},
             visitante: {
                 nombre: document.getElementById('visitantename').value,
+                nombrelargo: document.getElementById('visitantenamelong').value,
                 color: document.getElementById('visitantecolor').value,
                 goles: document.getElementById('golesvisitante').value}
         };
@@ -46,6 +48,10 @@
     function show(cb) {
         nodecg.sendMessage("hide", cb.checked);
     }
+
+    function showBig(cb) {
+        nodecg.sendMessage("hideBig", cb.checked);
+    }
     </script>
 </head>
 <body>
@@ -60,12 +66,14 @@
     </div>
     <div id="local">
         <input type="text" id="localname" value="LOC" size="3">
+        <input type="text" id="localnamelong" value="Local" size="20">
         <input type="color" id="localcolor" value="#ff0000">
         <input type="number" id="goleslocal" min="0" max="99" value="0">
         <button type="button" id="boton_gollocal" onclick="gol_local()">Gol!</button> 
     </div>
     <div id="visitante">
         <input type="text" id="visitantename" value="VIS" size="3">
+        <input type="text" id="visitantenamelong" value="Visitante" size="20">
         <input type="color" id="visitantecolor" value="#0000ff">
         <input type="number" id="golesvisitante" min="0" max="99" value="0">
         <button type="button" id="boton_golvisitante" onclick="gol_visitante()">Gol!</button> 
@@ -74,7 +82,10 @@
         <button type="button" onclick="update_scoreboard(false)">Update score</button> 
     </div>
     <div id="showhide">
-        Mostrar: <input type="checkbox" onclick="show(this)" checked>
+        Mostrar marcador pequeño: <input type="checkbox" onclick="show(this)" checked>
+    </div>
+    <div id="showhideBig">
+        Mostrar marcador grande: <input type="checkbox" onclick="showBig(this)" checked>
     </div>
 </body>
 </html>

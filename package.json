@@ -11,12 +11,17 @@
         "width": 600,
         "height": 100,
         "singleInstance": false
+      },
+      {
+        "file": "marcador.html",
+        "width": 1200,
+        "height": 300
       }
     ],
     "dashboardPanels": [
       {
-        "name": "tiempo",
-        "title": "Tiempo",
+        "name": "smallscore",
+        "title": "Marcador pequeño",
         "width": 2,
         "file": "tiempo.html",
         "headerColor": "#9f9bbd"
