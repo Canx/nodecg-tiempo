@@ -52,6 +52,10 @@
     function showBig(cb) {
         nodecg.sendMessage("hideBig", cb.checked);
     }
+
+    function showRoster(cb) {
+        nodecg.sendMessage("hideRoster", cb.checked);
+    }
     </script>
 </head>
 <body>
@@ -86,6 +90,9 @@
     </div>
     <div id="showhideBig">
         Mostrar marcador grande: <input type="checkbox" onclick="showBig(this)" checked>
+    </div>
+    <div id="showhideBig">
+        Mostrar alineación: <input type="checkbox" onclick="showRoster(this)" checked>
     </div>
 </body>
 </html>

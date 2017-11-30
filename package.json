@@ -16,6 +16,11 @@
         "file": "marcador.html",
         "width": 1200,
         "height": 300
+      },
+      {
+        "file": "alineacion.html",
+        "width": 600,
+        "height": 800
       }
     ],
     "dashboardPanels": [
