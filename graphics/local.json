@@ -1,0 +1,52 @@
+{
+    "logo": "escudogodella.png",
+    "name": "Godella C.F.",
+	"players": [{
+			"number": 50,
+			"name": "Enay"
+		},
+		{
+			"number": 51,
+			"name": "Joan"
+		},
+		{
+			"number": 52,
+			"name": "Daniel"
+		},
+		{
+			"number": 53,
+			"name": "Lucas"
+		},
+		{
+			"number": 55,
+			"name": "Pau"
+		},
+		{
+			"number": 57,
+			"name": "Hugo"
+		},
+		{
+			"number": 58,
+			"name": "Gael"
+		},
+		{
+			"number": 59,
+			"name": "Carlos"
+		},
+		{
+			"number": 60,
+			"name": "Teo"
+		},
+		{
+			"number": 61,
+			"name": "Xavi"
+		},
+		{
+			"number": 62,
+			"name": "Leo"
+        },
+        {   "number": "coach",
+            "name": "Rafa"
+        }
+	]
+}
